@@ -1,0 +1,6 @@
+.header{
+    @apply flex justify-between mt-6;
+   .class{
+    @apply text-clip
+   }
+};

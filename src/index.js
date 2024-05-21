@@ -1,0 +1,10 @@
+import "../src/components/header/header";
+import "../src/components/header/header.html";
+import "../src/components/title/title";
+import "../src/components/title/title.html";
+import "./components/form/form";
+import "./components/form/form.html";
+import "./components/jokes/jokes";
+import "./components/form/categories";
+import "./components/jokes/jokes.html";
+import "../public/output.css";
