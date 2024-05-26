@@ -48,6 +48,7 @@ if (formWrapper) {
       console.log(err);
     }
     searchInput.value = "";
+    path = `random`;
     cleanCategoryWrapper();
   };
 }
