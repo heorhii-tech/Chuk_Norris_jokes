@@ -4,6 +4,7 @@ import commentIconSideBarTamplate from "../../assets/commentIconSideBar.png";
 import unlikedIconTamplate from "../../assets/unliked.png";
 import likedIconTamplate from "../../assets/liked.png";
 const favJokesWrap = document.getElementById("favJokesWrap");
+console.log(commentIconTamplate);
 
 export const showJoke = (joke) => {
   const jokeDiv = document.createElement(`div`);

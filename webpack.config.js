@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   context: path.resolve(__dirname, "src"),
   entry: ["@babel/polyfill", "./index.js"],
   output: {
