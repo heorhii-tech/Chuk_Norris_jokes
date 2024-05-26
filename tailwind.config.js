@@ -6,6 +6,18 @@ module.exports = {
         sub_main_color: "#ABABAB",
         light_grey: "#F8F8F8",
       },
+      spacing: {
+        "540px": "540px",
+        "680px": "680px",
+      },
+      screens: {
+        laptop: "1024px",
+
+        desktop: "1280px",
+      },
+      fontSize: {
+        "10px": "10px",
+      },
     },
   },
   plugins: [require("tailwindcss/nesting"), require("autoprefixer")],

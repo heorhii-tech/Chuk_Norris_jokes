@@ -1,22 +1,22 @@
 const allJokeWrapper = document.getElementById("jokesWrapper");
 import commentIconTamplate from "../../assets/comment.png";
-
+import commentIconSideBarTamplate from "../../assets/commentIconSideBar.png";
 import unlikedIconTamplate from "../../assets/unliked.png";
 import likedIconTamplate from "../../assets/liked.png";
 const favJokesWrap = document.getElementById("favJokesWrap");
 
 export const showJoke = (joke) => {
   const jokeDiv = document.createElement(`div`);
-  const commentIcon = document.createElement(`img`);
+
   const commentIconSideBar = document.createElement(`img`);
-  commentIcon.src = commentIconTamplate;
+  commentIconSideBar.innerHTML = `src=${commentIconSideBarTamplate}`;
 
   jokeDiv.id = joke.id;
   jokeDiv.className = `joke`;
   let jokeValue = `<p>${joke.value}</p>`;
 
   joke.categories.length
-    ? (jokeDiv.innerHTML = `<img class='comment_icon' src=${commentIconTamplate}/>
+    ? (jokeDiv.innerHTML = `<img class="comment_icon" src=${commentIconTamplate}/>
   <div>
   <p>${joke.value}</p>
   <h3>${joke.categories}</h3>
@@ -24,7 +24,7 @@ export const showJoke = (joke) => {
   
   `)
     : (jokeDiv.innerHTML = `
-    <img src=${commentIconTamplate}/>
+    <img class="comment_icon" src=${commentIconTamplate}/>
     <div>
   <p>${joke.value}</p>
   </div>`);
@@ -54,6 +54,8 @@ export const showJoke = (joke) => {
     favBtn.value = `remove`;
     favBtn.src = likedIconTamplate;
     jokeDiv.prepend(favBtn);
+    jokeDiv.querySelector(`.comment_icon`).src = commentIconSideBarTamplate;
+
     favJokesWrap.prepend(jokeDiv);
   }
 
@@ -72,6 +74,7 @@ const attachFavButtonHandler = (joke, favBtn) => {
       favBtn.src = likedIconTamplate;
       joke.favorite = true;
       storageJokes.push(joke);
+      favBtn.value = `remove`;
 
       showJoke(joke);
     } else if (favBtn.value === `remove`) {

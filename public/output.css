@@ -593,6 +593,14 @@ video {
   padding: 1.25rem;
 }
 
+@media (min-width: 768px) {
+  .main_wrapper {
+    margin: auto;
+    padding: 0.5rem;
+    padding-top: 1.25rem;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -609,6 +617,7 @@ video {
   position: relative;
   z-index: 20;
   display: flex;
+  cursor: pointer;
   align-items: center;
   gap: 0.75rem;
 }
@@ -753,10 +762,29 @@ form input[type=text] {
   padding-bottom: 1.25rem;
 }
 
+@media (min-width: 768px) {
+  .joke {
+    max-width: 680px;
+    justify-content: normal;
+    gap: 1.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 .joke div {
   margin-top: 1rem;
   display: flex;
+  width: 80%;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .joke div {
+    width: auto;
+  }
 }
 
 .joke .like_btn {
@@ -767,10 +795,18 @@ form input[type=text] {
 
 .joke p {
   margin-bottom: 2.5rem;
+  margin-bottom: 0px;
   width: 15rem;
+  max-width: 540px;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .joke p {
+    width: auto;
+  }
 }
 
 .joke h3 {
@@ -787,6 +823,15 @@ form input[type=text] {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .joke h3 {
+    align-self: flex-end;
+  }
+}
+
+.joke h3 {
   letter-spacing: 2px;
 }
 
@@ -839,21 +884,32 @@ form input[type=text] {
 .sidebar {
   position: absolute;
   top: 0px;
+  right: 0px;
   z-index: 10;
-  height: 100vh;
+  min-height: 100vh;
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 50%;
+  }
 }
 
 .sidebar .favorite_jokes_wrapper {
   margin-top: 4rem;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
 
 .sidebar .favorite_jokes_wrapper .joke {
+  gap: 1.25rem;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -869,8 +925,10 @@ form input[type=text] {
 
 .sidebar .favorite_jokes_wrapper .joke h3 {
   margin-top: 0px;
+  margin-top: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+  font-size: 10px;
 }
 
 .title_wrapper {
@@ -886,10 +944,6 @@ form input[type=text] {
 .jokes_wrapper {
   position: relative;
   z-index: 0;
-}
-
-.body {
-  height: 100vh;
 }
 
 

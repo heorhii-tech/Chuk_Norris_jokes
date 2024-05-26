@@ -24,7 +24,6 @@ const cleanCategoryWrapper = () => {
 if (formWrapper) {
   formWrapper.onsubmit = (e) => {
     e.preventDefault();
-    console.log(path);
 
     let jokeType = formWrapper.querySelector(
       `input[name="jokeType"]:checked`
