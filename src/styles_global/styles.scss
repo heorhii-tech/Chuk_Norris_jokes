@@ -1,6 +1,10 @@
 //main wrapper 
+body,html{
+    @apply h-full;
+    overflow: auto;
+}
 .main_wrapper{
-    @apply p-5 container  relative md:m-auto md:p-2 md:pt-5;
+    @apply p-5 overflow-auto container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5;
    
 };
 //main wrapper 
@@ -92,10 +96,10 @@ form{
 //jokes
 .joke{
     
-    @apply bg-light_grey pt-12 px-5 pb-5 flex justify-between items-start mt-4 relative rounded-xl md:max-w-680px md:justify-normal md:gap-5 md:px-10 md:pt-16 md:pb-10;
+    @apply bg-light_grey pt-12 px-5 pb-5 flex justify-between items-start mt-4 relative rounded-xl md:max-w-[754px] md:justify-normal md:gap-5 md:px-10 md:pt-16 md:pb-10;
    
     div {
-          @apply flex flex-col mt-4 w-4/5 md:w-auto;
+          @apply flex flex-col mt-4 w-4/5 md:w-[614px];
            
         }
     img{
@@ -127,19 +131,28 @@ form{
     @apply bg-light_grey font-medium text-slate-950 #{!important};
     
 }
+.overlay{
+    @apply w-full absolute top-0  left-[-32px] min-h-full pointer-events-auto;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 
 // sidebar
 .sidebar{
-    @apply container bg-light_grey absolute z-10 top-0 min-h-screen md:w-1/2 right-0;
+    @apply container bg-light_grey absolute z-10 top-0 min-h-screen right-0 md:w-[56%];
+    
        
     .favorite_jokes_wrapper{
         
         @apply flex flex-col mt-16 items-center justify-center min-h-full bg-light_grey;
         .joke {
-                @apply bg-white rounded-xl gap-5;  
+                @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5;  
                 border: 1px solid #F8F8F8;
                 box-shadow: 0px 4px 6px 0px #0000001A;
+                div{
+                    @apply md:w-[298px];
+                }
                 p {
                     @apply text-sm font-normal;
                 }

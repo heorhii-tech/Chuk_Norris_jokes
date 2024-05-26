@@ -554,6 +554,11 @@ video {
   --tw-contain-style:  ;
 }
 
+body, html {
+  height: 100%;
+  overflow: auto;
+}
+
 .main_wrapper {
   width: 100%;
 }
@@ -590,6 +595,10 @@ video {
 
 .main_wrapper {
   position: relative;
+  margin: auto;
+  min-height: 100%;
+  width: 100%;
+  overflow: auto;
   padding: 1.25rem;
 }
 
@@ -764,7 +773,7 @@ form input[type=text] {
 
 @media (min-width: 768px) {
   .joke {
-    max-width: 680px;
+    max-width: 754px;
     justify-content: normal;
     gap: 1.25rem;
     padding-left: 2.5rem;
@@ -783,7 +792,7 @@ form input[type=text] {
 
 @media (min-width: 768px) {
   .joke div {
-    width: auto;
+    width: 614px;
   }
 }
 
@@ -847,6 +856,17 @@ form input[type=text] {
   color: rgb(2 6 23 / var(--tw-text-opacity)) !important;
 }
 
+.overlay {
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  left: -32px;
+  min-height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .sidebar {
   width: 100%;
 }
@@ -893,7 +913,7 @@ form input[type=text] {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 50%;
+    width: 56%;
   }
 }
 
@@ -913,8 +933,26 @@ form input[type=text] {
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .sidebar .favorite_jokes_wrapper .joke {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 3rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.sidebar .favorite_jokes_wrapper .joke {
   border: 1px solid #F8F8F8;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+@media (min-width: 768px) {
+  .sidebar .favorite_jokes_wrapper .joke div {
+    width: 298px;
+  }
 }
 
 .sidebar .favorite_jokes_wrapper .joke p {
