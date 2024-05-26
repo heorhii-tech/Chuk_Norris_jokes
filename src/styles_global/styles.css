@@ -4,7 +4,10 @@ body, html {
 }
 
 .main_wrapper {
-  @apply p-5 overflow-auto container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5;
+  @apply p-5 overflow-auto container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5 xl:max-w-[960px] xl:m-0;
+}
+.main_wrapper .content_wrapper {
+  @apply xl:max-w-[600px] xl:m-auto;
 }
 
 .header {
@@ -14,7 +17,7 @@ body, html {
   @apply text-xl font-bold;
 }
 .header .burger_menu {
-  @apply flex gap-3 items-center relative z-20 cursor-pointer;
+  @apply flex gap-3 items-center relative z-20 cursor-pointer xl:hidden;
 }
 .header .burger_menu .burger_menu_title {
   @apply text-xl font-medium text-sub_main_color;
@@ -72,7 +75,7 @@ form input[type=text] {
   @apply flex flex-col mt-4 w-4/5 md:w-[614px];
 }
 .joke .like_btn {
-  @apply absolute;
+  @apply absolute cursor-pointer;
   top: 7%;
   right: 6%;
 }
@@ -99,10 +102,13 @@ form input[type=text] {
 }
 
 .sidebar {
-  @apply container bg-light_grey absolute z-10 top-0 min-h-screen right-0 md:w-[56%];
+  @apply container bg-light_grey absolute z-10 top-0 min-h-screen right-0 md:w-[56%] xl:block max-w-[480px];
+}
+.sidebar .sidebar_title {
+  @apply hidden xl:block xl:m-10 font-medium text-xl text-sub_main_color;
 }
 .sidebar .favorite_jokes_wrapper {
-  @apply flex flex-col mt-16 items-center justify-center min-h-full bg-light_grey;
+  @apply flex flex-col mt-16 items-center justify-center min-h-full bg-light_grey xl:mt-5;
 }
 .sidebar .favorite_jokes_wrapper .joke {
   @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5;

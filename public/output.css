@@ -610,6 +610,18 @@ body, html {
   }
 }
 
+@media (min-width: 1280px) {
+  .main_wrapper {
+    margin: 0px;
+    max-width: 960px;
+  }
+
+  .main_wrapper .content_wrapper {
+    margin: auto;
+    max-width: 600px;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -629,6 +641,12 @@ body, html {
   cursor: pointer;
   align-items: center;
   gap: 0.75rem;
+}
+
+@media (min-width: 1280px) {
+  .header .burger_menu {
+    display: none;
+  }
 }
 
 .header .burger_menu .burger_menu_title {
@@ -798,6 +816,7 @@ form input[type=text] {
 
 .joke .like_btn {
   position: absolute;
+  cursor: pointer;
   top: 7%;
   right: 6%;
 }
@@ -907,6 +926,7 @@ form input[type=text] {
   right: 0px;
   z-index: 10;
   min-height: 100vh;
+  max-width: 480px;
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
@@ -914,6 +934,28 @@ form input[type=text] {
 @media (min-width: 768px) {
   .sidebar {
     width: 56%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+.sidebar .sidebar_title {
+  display: none;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(171 171 171 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1280px) {
+  .sidebar .sidebar_title {
+    margin: 2.5rem;
+    display: block;
   }
 }
 
@@ -926,6 +968,12 @@ form input[type=text] {
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1280px) {
+  .sidebar .favorite_jokes_wrapper {
+    margin-top: 1.25rem;
+  }
 }
 
 .sidebar .favorite_jokes_wrapper .joke {
