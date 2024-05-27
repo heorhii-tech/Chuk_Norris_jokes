@@ -81,7 +81,7 @@ form{
         @apply border-2 rounded-md border-light_grey;
         label{
             
-            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm xl:px;
+            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-xs font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm;
             &:hover{
                 @apply bg-light_grey text-zinc-950;
             }
