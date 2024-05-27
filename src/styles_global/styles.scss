@@ -1,12 +1,14 @@
 //main wrapper 
 body,html{
-    @apply h-full;
+    @apply min-h-screen;
     overflow: auto;
+    
 }
+
 .main_wrapper{
     @apply p-5 overflow-auto container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5 xl:max-w-[960px] xl:m-0;
     .content_wrapper{
-        @apply xl:max-w-[600px] xl:m-auto
+        @apply xl:max-w-[680px] xl:m-auto
     }
    
 };
@@ -79,7 +81,7 @@ form{
         @apply border-2 rounded-md border-light_grey;
         label{
             
-            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-xs font-medium text-sub_main_color duration-150 ease-in-out;
+            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out;
             &:hover{
                 @apply bg-light_grey text-zinc-950;
             }
@@ -135,7 +137,8 @@ form{
     
 }
 .overlay{
-    @apply w-full absolute top-0  left-[-32px] min-h-full pointer-events-auto;
+    @apply w-full fixed top-0  left-[-32px] bottom-0 right-0 min-h-full pointer-events-auto ;
+    
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -150,11 +153,14 @@ form{
     }
     .favorite_jokes_wrapper{
         
-        @apply flex flex-col mt-16 items-center justify-center min-h-full bg-light_grey xl:mt-5;
+        @apply flex flex-col mt-16  items-center justify-center min-h-full bg-light_grey xl:mt-5;
         .joke {
-                @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5;  
+                @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5 xl:pb-12;  
                 border: 1px solid #F8F8F8;
                 box-shadow: 0px 4px 6px 0px #0000001A;
+                .like_btn{
+                    @apply top-[10%]
+                }
                 div{
                     @apply md:w-[298px];
                 }
@@ -162,7 +168,7 @@ form{
                     @apply text-sm font-normal;
                 }
                 h3{
-                    @apply mt-0 bg-light_grey mt-2 text-10px ;
+                    @apply hidden ;
                 }
          }
 

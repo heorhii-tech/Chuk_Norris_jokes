@@ -555,7 +555,7 @@ video {
 }
 
 body, html {
-  height: 100%;
+  min-height: 100vh;
   overflow: auto;
 }
 
@@ -618,7 +618,7 @@ body, html {
 
   .main_wrapper .content_wrapper {
     margin: auto;
-    max-width: 600px;
+    max-width: 680px;
   }
 }
 
@@ -754,8 +754,8 @@ form input[type=text] {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   text-align: center;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(171 171 171 / var(--tw-text-opacity));
@@ -877,9 +877,11 @@ form input[type=text] {
 
 .overlay {
   pointer-events: auto;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: -32px;
+  bottom: 0px;
+  right: 0px;
   min-height: 100%;
   width: 100%;
   z-index: 2;
@@ -992,9 +994,19 @@ form input[type=text] {
   }
 }
 
+@media (min-width: 1280px) {
+  .sidebar .favorite_jokes_wrapper .joke {
+    padding-bottom: 3rem;
+  }
+}
+
 .sidebar .favorite_jokes_wrapper .joke {
   border: 1px solid #F8F8F8;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.sidebar .favorite_jokes_wrapper .joke .like_btn {
+  top: 10%;
 }
 
 @media (min-width: 768px) {
@@ -1010,11 +1022,7 @@ form input[type=text] {
 }
 
 .sidebar .favorite_jokes_wrapper .joke h3 {
-  margin-top: 0px;
-  margin-top: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
-  font-size: 10px;
+  display: none;
 }
 
 .title_wrapper {
