@@ -48,7 +48,7 @@ form{
     @apply flex flex-col mt-11;
     
     label{
-        @apply text-lg font-normal cursor-pointer leading-7;
+        @apply text-lg font-normal cursor-pointer leading-7 ;
     }
 
 
@@ -67,7 +67,7 @@ form{
 //categories
 .categories_wrapper{
 
-    @apply grid grid-cols-3 gap-1 my-5;
+    @apply grid grid-cols-4 gap-1 my-5;
     li{
         @apply  flex justify-center ;
 
@@ -81,7 +81,7 @@ form{
         @apply border-2 rounded-md border-light_grey;
         label{
             
-            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out;
+            @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm xl:px;
             &:hover{
                 @apply bg-light_grey text-zinc-950;
             }

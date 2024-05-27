@@ -48,7 +48,7 @@ form input[type=text] {
 }
 
 .categories_wrapper {
-  @apply grid grid-cols-3 gap-1 my-5;
+  @apply grid grid-cols-4 gap-1 my-5;
 }
 .categories_wrapper li {
   @apply flex justify-center;
@@ -59,7 +59,7 @@ form input[type=text] {
   -webkit-appearance: none;
 }
 .categories_wrapper li label {
-  @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out;
+  @apply px-3 py-1 cursor-pointer text-center w-full h-full text-lg font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm xl:px;
 }
 .categories_wrapper li label:hover {
   @apply bg-light_grey text-zinc-950;
