@@ -16,7 +16,7 @@ module.exports = {
         desktop: "1280px",
       },
       fontSize: {
-        "10px": "10px",
+        s: ["12px", "12px"],
       },
     },
   },

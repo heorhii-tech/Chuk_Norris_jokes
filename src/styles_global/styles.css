@@ -1,10 +1,9 @@
 body, html {
   @apply min-h-screen;
-  overflow: auto;
 }
 
 .main_wrapper {
-  @apply p-5 overflow-auto container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5 xl:max-w-[960px] xl:m-0;
+  @apply p-5 container min-h-full m-auto w-full relative md:m-auto md:p-2 md:pt-5 xl:max-w-[960px] xl:m-0;
 }
 .main_wrapper .content_wrapper {
   @apply xl:max-w-[680px] xl:m-auto;
@@ -48,7 +47,7 @@ form input[type=text] {
 }
 
 .categories_wrapper {
-  @apply grid grid-cols-4 gap-1 my-5;
+  @apply grid grid-cols-3 gap-1 my-5 md:grid-cols-4;
 }
 .categories_wrapper li {
   @apply flex justify-center;
@@ -59,7 +58,7 @@ form input[type=text] {
   -webkit-appearance: none;
 }
 .categories_wrapper li label {
-  @apply px-3 py-1 cursor-pointer text-center w-full h-full text-xs font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm;
+  @apply px-3 py-1 cursor-pointer text-center w-full h-full text-s font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm;
 }
 .categories_wrapper li label:hover {
   @apply bg-light_grey text-zinc-950;
@@ -96,22 +95,22 @@ form input[type=text] {
 }
 
 .overlay {
-  @apply w-full fixed top-0  left-[-32px] bottom-0 right-0 min-h-full pointer-events-auto;
+  @apply md:w-full md:fixed md:top-0  md:left-[-32px] bottom-0 right-0 md:min-h-full md:pointer-events-auto;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sidebar {
-  @apply container bg-light_grey absolute z-10 top-0 min-h-screen right-0 md:w-[56%] xl:block max-w-[480px];
+  @apply container bg-light_grey pb-10 absolute z-10 top-0 min-h-full right-0 md:w-[56%] xl:block max-w-[480px];
 }
 .sidebar .sidebar_title {
-  @apply hidden xl:block xl:m-10 font-medium text-xl text-sub_main_color;
+  @apply hidden xl:block xl:mt-10 xl:mx-10 mb-5 font-medium text-xl text-sub_main_color;
 }
 .sidebar .favorite_jokes_wrapper {
-  @apply flex flex-col mt-16  items-center justify-center min-h-full bg-light_grey xl:mt-5;
+  @apply flex flex-col mt-16  items-center justify-center min-h-full bg-light_grey xl:mt-0 gap-5 xl:justify-start;
 }
 .sidebar .favorite_jokes_wrapper .joke {
-  @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5 xl:pb-12;
+  @apply bg-white rounded-xl gap-5 md:pt-12 md:px-5 md:pb-5 xl:pb-12 mt-0;
   border: 1px solid #F8F8F8;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1019607843);
 }
