@@ -725,6 +725,7 @@ form input[type=text] {
 
 .categories_wrapper li {
   display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 0.375rem;
   border-width: 2px;
@@ -739,14 +740,16 @@ form input[type=text] {
 }
 
 .categories_wrapper li label {
+  display: flex;
   height: 100%;
   width: 100%;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  text-align: center;
   font-size: 12px;
   line-height: 12px;
   font-weight: 500;
