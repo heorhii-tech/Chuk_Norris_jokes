@@ -1,10 +1,9 @@
 const allJokeWrapper = document.getElementById("jokesWrapper");
-import commentIconTamplate from "../../assets/comment.png";
+import commentIconTamplate from "../../assets/comments.png";
 import commentIconSideBarTamplate from "../../assets/commentIconSideBar.png";
 import unlikedIconTamplate from "../../assets/unliked.png";
 import likedIconTamplate from "../../assets/liked.png";
 const favJokesWrap = document.getElementById("favJokesWrap");
-console.log(commentIconTamplate);
 
 export const showJoke = (joke) => {
   const jokeDiv = document.createElement(`div`);
@@ -14,12 +13,15 @@ export const showJoke = (joke) => {
 
   jokeDiv.id = joke.id;
   jokeDiv.className = `joke`;
-  let jokeValue = `<p>${joke.value}</p>`;
+  const jokeUpdated = joke[`updated_at`].split(".")[0];
 
   joke.categories.length
-    ? (jokeDiv.innerHTML = `<img class="comment_icon" src=${commentIconTamplate}/>
+    ? (jokeDiv.innerHTML = `
+  <img class="comment_icon" src=${commentIconTamplate}/>
   <div>
-  <p>${joke.value}</p>
+   <a href="#">ID: ${joke.id}</a>
+   <p>${joke.value}</p>
+   <h4>Last updated: ${jokeUpdated}</h4>
   <h3>${joke.categories}</h3>
   </div>
   
@@ -27,8 +29,11 @@ export const showJoke = (joke) => {
     : (jokeDiv.innerHTML = `
     <img class="comment_icon" src=${commentIconTamplate}/>
     <div>
-  <p>${joke.value}</p>
-  </div>`);
+     <a href="#">ID: ${joke.id}</a>
+     <p>${joke.value}</p>
+     <h4>Last updated: ${jokeUpdated}</h4>
+    </div>`);
+  console.dir(jokeDiv);
 
   let favBtn = document.createElement("img");
   favBtn.className = "like_btn";
