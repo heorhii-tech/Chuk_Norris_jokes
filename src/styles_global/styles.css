@@ -82,13 +82,13 @@ form input[type=text] {
   @apply flex flex-col  w-4/5 md:w-[614px];
 }
 .joke .like_btn {
-  @apply absolute cursor-pointer top-[7%] right-[6%] md:top-[15%];
+  @apply absolute cursor-pointer top-[7%] right-[6%] md:top-[15%] transition duration-300 ease-in-out hover:scale-110;
 }
 .joke a {
   @apply text-[10px] font-medium text-sky-400/100;
 }
 .joke p {
-  @apply w-60 text-lg font-normal mb-10 md:w-auto mb-0 max-w-540px;
+  @apply w-60 text-lg font-normal mb-10 md:w-auto max-w-540px;
 }
 .joke h3 {
   @apply self-start mt-[10px] md:mt-[-21px] md:mb-1 py-1 px-4 bg-white rounded-md text-xs font-medium leading-4 uppercase md:self-end;

@@ -13,11 +13,11 @@ export const showJoke = (joke) => {
 
   jokeDiv.id = joke.id;
   jokeDiv.className = `joke`;
-  const jokeUpdated = joke[`updated_at`].split(".")[0];
+  const jokeUpdated = joke[`updated_at`];
 
   joke.categories.length
     ? (jokeDiv.innerHTML = `
-  <img class="comment_icon" src=${commentIconTamplate}/>
+  <img class="comment_icon" src=${commentIconTamplate} />
   <div>
    <a href="#">ID: ${joke.id}</a>
    <p>${joke.value}</p>
@@ -27,7 +27,7 @@ export const showJoke = (joke) => {
   
   `)
     : (jokeDiv.innerHTML = `
-    <img class="comment_icon" src=${commentIconTamplate}/>
+    <img class="comment_icon" src=${commentIconTamplate} />
     <div>
      <a href="#">ID: ${joke.id}</a>
      <p>${joke.value}</p>

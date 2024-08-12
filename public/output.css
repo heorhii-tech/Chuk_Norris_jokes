@@ -826,6 +826,17 @@ form input[type=text] {
   top: 7%;
   right: 6%;
   cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.joke .like_btn:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 768px) {
@@ -842,7 +853,6 @@ form input[type=text] {
 
 .joke p {
   margin-bottom: 2.5rem;
-  margin-bottom: 0px;
   width: 15rem;
   max-width: 540px;
   font-size: 1.125rem;
@@ -1109,6 +1119,7 @@ form input[type=text] {
   position: relative;
   z-index: 0;
 }
+
 
 
 /*# sourceMappingURL=output.css.map */

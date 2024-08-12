@@ -117,14 +117,14 @@ form{
         
     }    
     .like_btn{
-        @apply absolute cursor-pointer top-[7%] right-[6%] md:top-[15%];
+        @apply absolute cursor-pointer top-[7%] right-[6%] md:top-[15%] transition duration-300 ease-in-out hover:scale-110;
         
     }
     a{
         @apply text-[10px] font-medium text-sky-400/100; 
     }
     p{
-        @apply w-60 text-lg font-normal mb-10 md:w-auto mb-0 max-w-540px;
+        @apply w-60 text-lg font-normal mb-10 md:w-auto max-w-540px;
         
     }
     

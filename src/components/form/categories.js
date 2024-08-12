@@ -27,7 +27,7 @@ import { setPathfromCategory } from "./form";
             : cat.lastChild.classList.remove(`focus`);
         });
         setPathfromCategory(
-          `/random?category=${e.target.innerText.toLowerCase()}`
+          `random?category=${e.target.innerText.toLowerCase()}`
         );
       });
     });
