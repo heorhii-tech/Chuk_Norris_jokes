@@ -6,6 +6,10 @@ body {
   @apply xl:flex;
 }
 
+* {
+  @apply font-sans;
+}
+
 .main_wrapper {
   @apply p-5 md:flex min-h-full m-auto w-full md:m-auto md:p-10 xl:justify-between xl:m-0 xl:p-0;
 }
@@ -54,7 +58,7 @@ form input[type=text] {
   @apply grid grid-cols-3 gap-1 my-5 md:grid-cols-4;
 }
 .categories_wrapper li {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center font-medium;
   @apply border-2 rounded-md border-light_grey;
 }
 .categories_wrapper li input[type=radio] {
@@ -62,7 +66,7 @@ form input[type=text] {
   -webkit-appearance: none;
 }
 .categories_wrapper li label {
-  @apply flex justify-center items-center px-3 py-1 cursor-pointer  w-full h-full text-s font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm;
+  @apply font-medium flex justify-center items-center px-3 py-1 cursor-pointer  w-full h-full text-s text-sub_main_color duration-150 ease-in-out xl:text-sm;
 }
 .categories_wrapper li label:hover {
   @apply bg-light_grey text-zinc-950;
@@ -99,7 +103,7 @@ form input[type=text] {
 }
 
 .focus {
-  @apply bg-light_grey font-medium text-slate-950 !important;
+  @apply bg-light_grey font-medium text-slate-950 2xl:font-semibold !important;
 }
 
 .overlay {

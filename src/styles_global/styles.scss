@@ -5,6 +5,9 @@ body,html{
 body{
     @apply xl:flex;
 }
+*{
+    @apply font-sans;
+}
 
                                                 
 
@@ -72,7 +75,7 @@ form{
 
     @apply grid grid-cols-3 gap-1 my-5 md:grid-cols-4;
     li{
-        @apply  flex justify-center items-center;
+        @apply  flex justify-center items-center font-medium;
 
 
 
@@ -84,7 +87,7 @@ form{
         @apply border-2 rounded-md border-light_grey;
         label{
             
-            @apply flex justify-center items-center px-3 py-1 cursor-pointer  w-full h-full text-s font-medium text-sub_main_color duration-150 ease-in-out xl:text-sm;
+            @apply font-medium flex justify-center items-center px-3 py-1 cursor-pointer  w-full h-full text-s text-sub_main_color duration-150 ease-in-out xl:text-sm;
             &:hover{
                 @apply bg-light_grey text-zinc-950;
             }
@@ -142,7 +145,7 @@ form{
     @apply hidden
 }
 .focus{
-    @apply bg-light_grey font-medium text-slate-950 #{!important};
+    @apply bg-light_grey font-medium text-slate-950 2xl:font-semibold #{!important};
     
 }
 .overlay{

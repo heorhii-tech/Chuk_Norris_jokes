@@ -33,7 +33,6 @@ export const showJoke = (joke) => {
      <p>${joke.value}</p>
      <h4>Last updated: ${jokeUpdated}</h4>
     </div>`);
-  console.dir(jokeDiv);
 
   let favBtn = document.createElement("img");
   favBtn.className = "like_btn";

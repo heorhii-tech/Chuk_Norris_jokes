@@ -18,6 +18,9 @@ module.exports = {
       fontSize: {
         s: ["12px", "12px"],
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss/nesting"), require("autoprefixer")],
